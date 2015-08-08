@@ -12,9 +12,12 @@ getData <- function(){
   return(myData)
 }
 
-#plot the subset of data
+#plot the data
 plotData <- getData()
+
 png(filename = "plot2.png", width = 480, height = 480, units = "px", bg = "white")
-plot(pData$DateTime,pData$Global_active_power,type="l", xlab="",
+
+plot(plotData$DateTime, plotData$Global_active_power, type="l", xlab="",
 ylab="Global Active Power (kilowatts)")
+
 dev.off()

@@ -12,12 +12,13 @@ getData <- function(){
   return(myData)
 }
 
-#plot the subset of data
+#plot the data
 plotData <- getData()
+
 lim <- c(0,1200)
 
-#create the png plot
 png(filename = "plot1.png", width = 480, height = 480, units = "px", bg = "white")
-hist(plotData$Global_active_power,main="Global Active Power", xlab="Global Active Power (kilowatts)", 
-  col="red", ylim=lim)
+
+hist(plotData$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red", ylim=lim)
+
 dev.off()
